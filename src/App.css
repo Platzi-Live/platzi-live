@@ -47,6 +47,10 @@
   margin: 5px 5px 5px 0;
   font-size: 2vh;
 }
+a:hover{
+  color:white;
+  text-decoration: none;
+}
 .imagenesChat{
   border-radius: 50%;
   width: 100%;
@@ -70,5 +74,12 @@
   font-size: 20px;
   text-align: right;
 }
+/*media querie*/
+/*@media screen and (max-width:321px){
+  .estiloTags li{
+    font-size: 90%;
+  }
+}*/
+/*fin de media querie*/
 
 /*fin seccion nancy*/
