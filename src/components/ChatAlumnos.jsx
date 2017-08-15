@@ -5,7 +5,7 @@ export default class ChatAlumnos extends Component{
 	render(){
 		return(
 				<div className="col-sm-12">
-								<div className="row">
+								<div className="row scroll">
 									<div className="col-xs-2 col-md-2">
 										<img className="imagenesChat" src={FotoUno} alt="imagen1"/>
 									</div>
