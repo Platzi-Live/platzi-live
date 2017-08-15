@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import FotoUno from "../img/imagen1.jpg";
 
 export default class ChatAlumnos extends Component{
-
 	render(){
 		return(
 				<div className="col-sm-12">
