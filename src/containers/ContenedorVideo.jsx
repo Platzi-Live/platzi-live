@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 export default class ContenedorVideo extends Component{
   render() {
-    return();
+    return(
+      <div>
+        <h1>hola</h1>
+      </div>
+    )
   }
 }
