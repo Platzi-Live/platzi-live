@@ -4,8 +4,11 @@ import '../ContenedorDescripcion.css';
 export default class TextoDescripcion extends Component{
   render() {
     return(
+      <div className="row">
+        <div className="col-xs-12 col-md-7 col-md-7 col-lg-7">
+
       <div className="">
-        <div className="">
+
           <div className="panel with-nav-tabs panel-default">
             <div className="panel-heading">
               <ul className="nav nav-tabs">
@@ -44,6 +47,7 @@ export default class TextoDescripcion extends Component{
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
     );
