@@ -5,11 +5,8 @@ import Navbar from '../components/Navbar.jsx';
 
 export default class ContenedorVideo extends Component{
   render() {
-    return(
-  
-        
-        
-        <div className="row ">
+    return(  
+      <div className="row ">
            <div className= "col-sm-12 col-md-8 col-lg-8 col-xl-8">
            <Navbar />
                <div className="embed-responsive embed-responsive-16by9">
@@ -19,7 +16,6 @@ export default class ContenedorVideo extends Component{
                </div>
            </div>
         </div>
-    );
-
+    )
   }
 }
