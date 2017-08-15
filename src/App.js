@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ContenedorVideo from './containers/ContenedorVideo.jsx';
 import ContenedorDescripcion from './containers/ContenedorDescripcion.jsx';
-import ContenedorVideo from './containers/ContenedorChat.jsx';
+import ContenedorChat from './containers/ContenedorChat.jsx';
 
 class App extends Component {
   render() {
