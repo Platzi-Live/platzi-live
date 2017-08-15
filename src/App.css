@@ -53,10 +53,13 @@
 }
 .fila-icono{
   margin-top: 5%;
+  /*margin-right: 2%;*/
+
 }
 .fa-star:before{
-  color:yellow;
+  color:grey;
   font-size: 20px;
+  text-align: right;
 }
 
 /*fin seccion nancy*/
