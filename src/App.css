@@ -47,20 +47,16 @@
   margin: 5px 5px 5px 0;
   font-size: 2vh;
 }
-/*.estiloTags li {
-  padding-right: 5px;
-  padding-left: 5px;
-  padding: 0 7px;
-  line-height: 30px;
-  border-radius: 15px;
-  margin-left: 5px;
-  cursor: pointer;
-  background: #0a8ecd;
-  color: #fff;
-  transition: background .2s;
-  display: inline-block;
-  margin: 5px 5px 5px 0;
-  font-size: 2vh;
+.imagenesChat{
+  border-radius: 50%;
+  width: 100%;
 }
-*/
+.fila-icono{
+  margin-top: 5%;
+}
+.fa-star:before{
+  color:yellow;
+  font-size: 20px;
+}
+
 /*fin seccion nancy*/

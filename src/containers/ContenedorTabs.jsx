@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ElementosTagChat from "../components/ElementosTagChat";
+import ChatAlumnos from "../components/ChatAlumnos";
 import '../ContenedorTabs.css';
 
 export default class ContenedorChat extends Component{
@@ -43,6 +44,9 @@ export default class ContenedorChat extends Component{
 										key={indice}/>)};
 								</ul>
 							</div>
+						</div>
+						<div className="row">
+							<ChatAlumnos />
 						</div>
 				    </div>
 				</div>
