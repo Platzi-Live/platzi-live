@@ -17,7 +17,7 @@ export default class EstudiantesDestacados extends Component{
     return(
         <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 estudiantesDestacados">
             <span className="col-xs-1 col-sm-1 col-md-1 col-lg-1 textoEstudiantes">Estudiantes<br/>Destacados</span>
-            <ul className="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+            <ul className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                 <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
                     <div className="estudiante">
                         <img className="img-responsive estudiante" src={estudiante1} alt=""/>
@@ -58,7 +58,18 @@ export default class EstudiantesDestacados extends Component{
                         <img className="img-responsive estudiante" src={estudiante11} alt=""/>
                     </div>
                 </li> 
-            </ul>    
+            </ul>
+            <div className="btn-group show-on-hover pull-right boton col-xs-1 col-sm-1 col-md-1 col-lg-1" >
+                <span type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span className="caret"></span>
+                </span>
+                <ul className="dropdown-menu" role="menu">
+                    <li><a href="#"><span className="glyphicon glyphicon-user"></span> Mi perfil(Freddy Vega)</a></li>
+                    <li><a href="#"><span className="glyphicon glyphicon-comment"></span> Mensajes Directos</a></li>
+                    <li><a href="#"><span className="glyphicon glyphicon-edit"></span> Mi suscripción</a></li>
+                    <li><a href="#"><span className="glyphicon glyphicon-new-window"></span> Salir</a></li>
+                </ul>
+            </div>   
         </div> 
     );
   }
