@@ -22,3 +22,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/*seccion nancy*/
+.texto-blanco{
+  color:white;
+}
+.color-azul{
+  background-color: #337AB7;
+}
+.texto-centrado{
+  text-align: center;
+}
+
+.estiloTags li{
+  border-radius: 40%;
+  /*margin-left: 2%;*/
+  font-size: 1.3rem;
+}
+/*fin seccion nancy*/
