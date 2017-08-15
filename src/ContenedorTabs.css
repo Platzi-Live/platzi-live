@@ -43,9 +43,11 @@
 #txtArea{
 	width: 100%;
 	padding-bottom: 40px;
+	background: #F3F3F6;
 }
 #caracteres{
 	position: relative;
 	bottom: 23px;
 	right: 5px;
+	color: #808B7A;
 }

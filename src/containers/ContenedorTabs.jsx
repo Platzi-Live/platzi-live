@@ -24,6 +24,9 @@ export default class ContenedorChat extends Component{
 			        </div>
 			    </div>
 			</div>
+			<div className="row">
+				
+			</div>
 		</div>
     	);
   }
