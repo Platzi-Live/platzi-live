@@ -4,6 +4,21 @@ import ChatAlumnos from "../components/ChatAlumnos";
 import '../ContenedorTabs.css';
 
 export default class ContenedorChat extends Component{
+
+     contar(e) {
+       let contadorCaracteres = 0;
+       const maximoCaracteres = 140;
+       const mensajeTextArea = document.getElementById("txtArea");
+       const cantidadCaracteres = document.getElementById("caracteres");
+
+
+       contadorCaracteres = mensajeTextArea.value.length;
+       const totalCaracteres = maximoCaracteres - contadorCaracteres;
+       cantidadCaracteres.innerText = totalCaracteres;
+
+    }
+    
+    
   render() {
   	const arregloTags = [
 	  	{
@@ -30,7 +45,7 @@ export default class ContenedorChat extends Component{
 				    </div>
 				    <div className="panel-body">
 				        <div className="tab-content">
-				            <textarea id="txtArea"  placeholder="Escribe una nota">
+				            <textarea id="txtArea"  placeholder="Escribe una nota" maxlength="140" onKeyUp={this.contar}>
 				            </textarea>
 				            <div className="pull-right">
 				            	<p id="caracteres">140</p>
