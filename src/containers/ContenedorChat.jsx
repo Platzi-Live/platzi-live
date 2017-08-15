@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 
-export default class ContenedorChat extends Component{
+
+export default class ContenedorChat extends Component {
   render() {
-    return();
+    return (
+    
+        <div>Hola</div>
+        
+    )
   }
 }
