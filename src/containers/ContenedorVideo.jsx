@@ -20,5 +20,6 @@ export default class ContenedorVideo extends Component{
            </div>
         </div>
     );
+
   }
 }
