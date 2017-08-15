@@ -47,6 +47,10 @@
   margin: 5px 5px 5px 0;
   font-size: 2vh;
 }
+a:hover{
+  color:white;
+  text-decoration: none;
+}
 .imagenesChat{
   border-radius: 50%;
   width: 100%;

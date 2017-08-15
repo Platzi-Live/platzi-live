@@ -6,7 +6,7 @@ export default class ElementosTagChat extends Component {
 		return(
 				<div className="col-xs-3 col-md-3 estiloTags">
 					<li className="active color-azul texto-centrado">
-						<a className="textoTags" href="#" className="texto-blanco">{this.props.textoTagChat}</a>
+						<a className="texto-tags" href="#" className="texto-blanco">{this.props.textoTagChat}</a>
 					</li>
 				</div>
 			);

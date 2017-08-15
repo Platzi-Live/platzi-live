@@ -8,7 +8,9 @@ export default class ContenedorChat extends Component {
   render() {
     return(
 			<div className="col-md-offset-8 col-xs-12 col-sm-4 col-md-4 col-lg-4 moviento-fijo">
-        		<EstudiantesDestacados />
+        		<div className="row">
+        			<EstudiantesDestacados />
+        		</div>
 				<ContenedorTabs />
 			</div>
 

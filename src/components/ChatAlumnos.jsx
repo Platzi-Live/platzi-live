@@ -2,6 +2,10 @@ import React,{Component} from 'react';
 import FotoUno from "../img/imagen1.jpg";
 
 export default class ChatAlumnos extends Component{
+	funcionEstrella(){
+		alert('hola');
+	}
+
 	render(){
 		return(
 				<div className="col-sm-12">
@@ -15,7 +19,7 @@ export default class ChatAlumnos extends Component{
 										PlatziLive me gustaria tema de Educación financiera, 
 										Educación Legal...¿Cómo vez?</p>
 									</div>
-									<div className="col-xs-2 col-md-2 fila-icono">
+									<div className="col-xs-2 col-md-2 fila-icono" onClick={this.funcionEstrella}>
 										<i className="fa fa-star" aria-hidden="true"></i>
 									</div>
 								</div>
