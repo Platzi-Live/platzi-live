@@ -4,8 +4,8 @@ import '../ContenedorDescripcion.css';
 export default class TextoDescripcion extends Component{
   render() {
     return(
-      <div className="row">
-        <div className="col-xs-12 col-md-12 col-md-8 col-lg-8">
+      <div className="">
+        <div className="">
           <div className="panel with-nav-tabs panel-default">
             <div className="panel-heading">
               <ul className="nav nav-tabs">
@@ -17,8 +17,9 @@ export default class TextoDescripcion extends Component{
       <div className="panel-body">
         <div className="tab-content">
           <div className="tab-pane fade in active padding-right" id="tab1default">
-            <div className="page-header row">
+            <div className=" row">
               <h1 className="col-xs-12 col-md-12 col-md-8 col-lg-8">Temario de la clase</h1>
+              <hr className="text-muted"/>
             </div>
             <div className="row">
               <h2 className="padding-right">Todos los jueves aquí transmitimos Platzi Live.</h2>
