@@ -9,13 +9,13 @@ export default class ChatAlumnos extends Component{
 									<div className="col-xs-2 col-md-2">
 										<img className="imagenesChat" src={FotoUno} alt="imagen1"/>
 									</div>
-									<div className="col-xs-9 col-md-9">
+									<div className="col-xs-9 col-md-8">
 										<p>Rsanchez17</p>
 										<p>Hola @Cvander para ver en ka plataform de 
 										PlatziLive me gustaria tema de Educación financiera, 
 										Educación Legal...¿Cómo vez?</p>
 									</div>
-									<div className="col-xs-1 col-md-1 fila-icono">
+									<div className="col-xs-2 col-md-2 fila-icono">
 										<i className="fa fa-star" aria-hidden="true"></i>
 									</div>
 								</div>
