@@ -22,3 +22,44 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/*seccion nancy*/
+.texto-blanco{
+  color:white;
+}
+.color-azul{
+  background-color: #337AB7;
+}
+.texto-centrado{
+  text-align: center;
+}
+.estiloTags, .estiloTags li {
+  padding-right: 5px;
+  padding-left: 5px;
+  padding: 0 7px;
+  line-height: 30px;
+  border-radius: 15px;
+  margin-left: 5px;
+  cursor: pointer;
+  background: #0a8ecd;
+  color: #fff;
+  transition: background .2s;
+  display: inline-block;
+  margin: 5px 5px 5px 0;
+  font-size: 2vh;
+}
+.imagenesChat{
+  border-radius: 50%;
+  width: 100%;
+}
+.fila-icono{
+  margin-top: 5%;
+  /*margin-right: 2%;*/
+
+}
+.fa-star:before{
+  color:grey;
+  font-size: 20px;
+  text-align: right;
+}
+
+/*fin seccion nancy*/
