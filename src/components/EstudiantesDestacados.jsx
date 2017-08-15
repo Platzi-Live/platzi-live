@@ -16,14 +16,9 @@ export default class EstudiantesDestacados extends Component{
   render() {
     return(
         <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 estudiantesDestacados">
-            <span className="col-xs-1 col-sm-1 col-md-1 col-lg-1 ">Estudiantes<br />Destacados</span>
-            <ul className="col-xs-1 col-sm-11 col-md-11 col-lg-11">
+            <span className="col-xs-1 col-sm-1 col-md-1 col-lg-1 textoEstudiantes">Estudiantes<br/>Destacados</span>
+            <ul className="col-xs-11 col-sm-11 col-md-11 col-lg-11">
                 <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante2} alt=""/>
-                        </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
                     <div className="estudiante">
                         <img className="img-responsive estudiante" src={estudiante1} alt=""/>
                     </div>
@@ -56,21 +51,6 @@ export default class EstudiantesDestacados extends Component{
                 <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
                     <div className="estudiante">
                         <img className="img-responsive estudiante" src={estudiante7} alt=""/>
-                    </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante8} alt=""/>
-                    </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante9} alt=""/>
-                    </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante10} alt=""/>
                     </div>
                 </li>
                 <li className="right estudiante-usuario col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
