@@ -1,0 +1,16 @@
+.estudiantesDestacados {
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    display: inline-block;
+    color: #858585;
+}
+
+.estudiante {
+    list-style: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+}
+
