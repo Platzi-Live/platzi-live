@@ -45,7 +45,7 @@ export default class ContenedorChat extends Component{
 				    </div>
 				    <div className="panel-body">
 				        <div className="tab-content">
-				            <textarea id="txtArea"  placeholder="Escribe una nota" maxlength="140" onKeyUp={this.contar}>
+				            <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.contar}>
 				            </textarea>
 				            <div className="pull-right">
 				            	<p id="caracteres">140</p>
