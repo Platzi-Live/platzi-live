@@ -5,7 +5,7 @@ export default class TextoDescripcion extends Component{
   render() {
     return(
       <div className="row">
-        <div className="col-xs-12 col-md-12 col-md-8 col-lg-8">
+        <div className="col-xs-12 col-md-7 col-md-7 col-lg-7">
           <div className="panel with-nav-tabs panel-default">
             <div className="panel-heading">
               <ul className="nav nav-tabs">
