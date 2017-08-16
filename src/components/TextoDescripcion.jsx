@@ -25,7 +25,9 @@ export default class TextoDescripcion extends Component{
                       </div>
                     </span>
                   </div>
-                    <h2 className="padding-right">Todos los jueves aquí transmitimos Platzi Live.</h2>
+                    <h2 className="padding-right">
+                      Todos los jueves aquí transmitimos Platzi Live.
+                    </h2>
                     <p>
                       <h4 className = "text-muted">¿Quieres saber que hay esta semana? Suscríbete a nuestra lista <a href="https://platzi.com/hola/">aquí</a></h4>
                       <h4 className = "text-muted">¿Quieres proponer un tema? Usa el chat de la derecha o escríbenos a cursos@platzi.com</h4>
