@@ -3,6 +3,10 @@ import ElementosTagChat from "../components/ElementosTagChat";
 import ChatAlumnos from "../components/ChatAlumnos";
 import '../ContenedorTabs.css';
 import Caracteres from '../components/Caracteres.jsx';
+import estudiante1 from "../img/alumnoDestacado1.jpg";
+import estudiante2 from "../img/alumnoDestacado2.jpeg";
+import '../App.css';
+
 
 export default class ContenedorTabs extends Component{
     constructor(props) {
@@ -15,12 +19,10 @@ export default class ContenedorTabs extends Component{
             {
                 foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png',
                 nombre: '@zitle',
-                comentario: 'Hola, probando'
-           },
-            {
-                foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png',
-                nombre: '@adri',
-                comentario: 'Ya me quiero dormir :('
+                comentario: 'Hola, probando',
+                pregunta: true,
+                mencion: true,
+                likes:0
            }
         ]
     }
@@ -30,43 +32,71 @@ export default class ContenedorTabs extends Component{
     this.imprimir = this.imprimir.bind(this);
 
 
+
 }
 
-     actualizarContador(e){
-         const valorInput = e.target.value.length;
-    
-    
-         let valorEstado = this.state.contador;
-         valorEstado = 140 - valorInput;
-          this.setState({
-             contador: valorEstado
-         })
-         console.log(valorEstado);
-         this.obtenerValorTexto(e);
-     }
+    actualizarContador(e){
+        const valorInput = e.target.value.length;
+        let valorEstado = this.state.contador;
+        valorEstado = 140 - valorInput;
+         this.setState({
+            contador: valorEstado
+        })
+        console.log(valorEstado);
+        this.obtenerValorTexto(e);
+    }
 
 
-     obtenerValorTexto(e){
+    obtenerValorTexto(e){
       let valorTexto = e.target.value;
+      let booleanos = true;
          console.log("This is the val " +valorTexto);
         this.setState({
-            usuario:valorTexto
+            mensaje:valorTexto,
+            pregunta: booleanos,
+            mencion: booleanos
         })
+
+        console.log(this.state) //Aquí se actualiza el estado.
      }
 
 
-    agregarComentario () {
+
+
+    agregarComentario (e) {
         let comentariosGuardados = this.state.usuarios;
         //console.log(comentariosGuardados);
-        //console.log("This is the user: " +this.state.usuario);
 
-        comentariosGuardados.unshift({foto:'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', nombre:'Zitle', comentario: this.state.usuario});
+        // console.log("This is the message: " + this.state.mensaje);
+        let mensajePregunta = this.state.mensaje;
+        let validarMensajePregunta = (mensajePregunta.charAt(mensajePregunta.length-1) == "?") ? comentariosGuardados.pregunta = true : false
+        let validarMensajeMencion = (mensajePregunta.charAt(mensajePregunta.length[0]) == "@") ? comentariosGuardados.mencion = true : false
+        colorPregunta:validarMensajePregunta = true ? "text-primary" : 'no'
+        console.log(validarMensajePregunta);
+        console.log(validarMensajeMencion);
+
+        comentariosGuardados.unshift(
+          {foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png',
+           nombre:'Zitle',
+          comentario: this.state.mensaje,
+          pregunta: this.state.pregunta,
+          mencion: this.state.mencion});
          console.log(comentariosGuardados);
          this.setState ({
            usuarios: comentariosGuardados
         })
          console.log(this.state.usuarios);
+         localStorage.setItem('usuarios', JSON.stringify(comentariosGuardados));
          
+    }
+    
+    
+     componentDidMount() {
+        let obteniendoUsuarios = localStorage.getItem("usuarios");
+        const convertirUsuariosAObjeto = JSON.parse(obteniendoUsuarios);
+        this.setState({
+            usuarios: convertirUsuariosAObjeto || [] //cuando no tenga nada en mi localstorage, que mande un arreglo vacio por defecto.  
+        });
     }
     
     
@@ -78,7 +108,8 @@ export default class ContenedorTabs extends Component{
       this.actualizarContador(e);   
     }
     
-    
+
+
     openLeftMenu() {
       document.getElementById("leftMenu").style.display = "block";
     }
@@ -87,18 +118,23 @@ export default class ContenedorTabs extends Component{
     document.getElementById("leftMenu").style.display = "none";
     }
 
+
+    // filtrarPreguntas(e){
+    //   let texto = this.state.usuarios[i].comentario;
+    //   console.log(texto);
+    //
+    //   for (i=0; i < texto.lenght ; i++) {
+    //
+    //   }
+    //
+    //   let textoSeparado = texto.substr(0, 2);
+    //  alert(textoSeparado);
+    //
+    // }
+
+
   render() {
-  	const arregloTags = [
-	  	{
-	  		titulo: 'Notas'
-	  	},
-	  	{
-	  		titulo:'Menciones'
-	  	},
-	  	{
-	  		titulo:'Mis Notas'
-	  	}
-  	]
+
     return(
     	<div>
 			<div className="row">
@@ -133,11 +169,7 @@ export default class ContenedorTabs extends Component{
 				        </div>
 						<div className="row">
 							<div className="col-sm-12">
-								<ul className="nav nav-tabs">
-									{arregloTags.map((item,indice) =>
-										<ElementosTagChat textoTagChat={item.titulo}
-										key={indice}/>)};
-								</ul>
+
 							</div>
 						</div>
 						<div className="row">

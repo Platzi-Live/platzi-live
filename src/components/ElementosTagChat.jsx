@@ -5,9 +5,7 @@ export default class ElementosTagChat extends Component {
 	render() {
 		return(
 				<div className="col-xs-3 col-md-3 estiloTags">
-					<li className="active color-azul texto-centrado">
-						<a className="texto-tags" href="#" className="texto-blanco">{this.props.textoTagChat}</a>
-					</li>
+				    
 				</div>
 			);
 	}
