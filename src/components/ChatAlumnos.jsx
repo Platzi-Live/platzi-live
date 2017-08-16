@@ -4,9 +4,15 @@ import ElementoEstrella from "./ElementoEstrella";
 import '../App.css';
 
 export default class ChatAlumnos extends Component{
+	constructor(props){
+		super(props);
+		this.state = {
+			colorPregunta:"text-muted"
+		}
+	}
 	render(){
 		return(
-				<div className="col-sm-12 scroll">
+				<div className="col-sm-12 scroll" styles={this.state.colorPregunta}>
 					{this.props.comentarios.map((item,indice)=>{
 						return(
 							<div className="row">

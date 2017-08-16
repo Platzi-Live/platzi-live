@@ -73,6 +73,10 @@ a:hover{
   font-size: 20px;
   text-align: right;
 }
+.fondo-azul {
+  background-color: blue;
+}
+
 .color-amarillo{
   color: yellow;
 }
