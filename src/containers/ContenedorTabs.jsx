@@ -86,12 +86,9 @@ export default class ContenedorTabs extends Component{
         })
          console.log(this.state.usuarios);
 
-<<<<<<< HEAD
     imprimir(e){
       let tecla = e.target.value;
       console.log(tecla);
-=======
->>>>>>> 91886d62a1e6df5b57185e0df7cb0fade7bb9efc
     }
 
 
