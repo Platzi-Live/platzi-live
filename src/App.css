@@ -70,9 +70,14 @@ a:hover{
   height:70px;
 }
 .fa-star:before{
-  color:grey;
   font-size: 20px;
   text-align: right;
+}
+.color-amarillo{
+  color: yellow;
+}
+.color-gris{
+  color: grey;
 }
 /*media querie*/
 /*@media screen and (max-width:321px){
