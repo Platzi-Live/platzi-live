@@ -7,6 +7,7 @@ import Caracteres from '../components/Caracteres.jsx';
 export default class ContenedorTabs extends Component{
     constructor(props) {
         super(props);
+<<<<<<< HEAD
         this.state = {
             contador: 140, 
              usuarios: [
@@ -25,11 +26,37 @@ export default class ContenedorTabs extends Component{
         this.actualizarContador = this.actualizarContador.bind(this);
         this.agregarComentario = this.agregarComentario.bind(this);   
     }
+=======
+
+
+    this.state = {
+        contador: 140,
+         usuarios: [
+            {
+                foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png',
+                nombre: '@zitle',
+                comentario: 'Hola, probando'
+           },
+            {
+                foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png',
+                nombre: '@adri',
+                comentario: 'Ya me quiero dormir :('
+           }
+        ]
+    }
+
+    this.actualizarContador = this.actualizarContador.bind(this);
+    this.agregarComentario = this.agregarComentario.bind(this);
+
+
+}
+
+>>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
     actualizarContador(e){
-        const valorInput = e.target.value.length; 
-       
-        
-        let valorEstado = this.state.contador; 
+        const valorInput = e.target.value.length;
+
+
+        let valorEstado = this.state.contador;
         valorEstado = 140 - valorInput;
          this.setState({
             contador: valorEstado
@@ -38,7 +65,12 @@ export default class ContenedorTabs extends Component{
         this.obtenerValorTexto(e);
     }
 
+<<<<<<< HEAD
     obtenerValorTexto(e){
+=======
+
+     obtenerValorTexto(e){
+>>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
       let valorTexto = e.target.value;
          console.log("This is the val " +valorTexto);
         this.setState({
@@ -46,13 +78,19 @@ export default class ContenedorTabs extends Component{
         })
         console.log(this.state) //Aquí se actualiza el estado.
      }
+<<<<<<< HEAD
     
     
     agregarComentario(usuario) {
+=======
+
+
+    agregarComentario (usuario) {
+>>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
         let comentariosGuardados = this.state.usuarios;
         //console.log(comentariosGuardados);
         console.log("This is the user: " +this.state.usuario);
-        
+
         comentariosGuardados.unshift({foto:'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', nombre:'Zitle', comentario: this.state.usuario});
          console.log(comentariosGuardados);
          this.setState ({
@@ -60,12 +98,17 @@ export default class ContenedorTabs extends Component{
         })
          console.log(this.state.usuarios);
     }
+<<<<<<< HEAD
     
     imprimir(e){
       console.log(e);
 
     }
     
+=======
+
+
+>>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
 
     openLeftMenu() {
       document.getElementById("leftMenu").style.display = "block";
@@ -130,7 +173,10 @@ export default class ContenedorTabs extends Component{
 							</div>
 						</div>
 						<div className="row">
+<<<<<<< HEAD
               {/*mandamos el arrelo por props*/}
+=======
+>>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
 							<ChatAlumnos comentarios = {this.state.usuarios}/>
 						</div>
 				    </div>
