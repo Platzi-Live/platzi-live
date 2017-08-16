@@ -1,18 +1,9 @@
-
 import React, { Component } from 'react';
 import EstudiantesDestacados from '../components/EstudiantesDestacados';
 import ContenedorTabs from './ContenedorTabs.jsx';
 
 
 export default class ContenedorChat extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = [
-      usuario: {
-        nombre:
-      }
-    ]
 
   render() {
     return(
@@ -22,6 +13,8 @@ export default class ContenedorChat extends Component {
         		</div>
 				<ContenedorTabs />
 			</div>
+
     	)
+
   }
 }
