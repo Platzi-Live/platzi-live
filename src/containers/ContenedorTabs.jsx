@@ -25,24 +25,25 @@ export default class ContenedorTabs extends Component{
         ]
     }
 
-    this.actualizarContador = this.actualizarContador.bind(this);
+    // this.actualizarContador = this.actualizarContador.bind(this);
     this.agregarComentario = this.agregarComentario.bind(this);
+    this.imprimir = this.imprimir.bind(this);
 
 
 }
 
-    actualizarContador(e){
-        const valorInput = e.target.value.length;
-
-
-        let valorEstado = this.state.contador;
-        valorEstado = 140 - valorInput;
-         this.setState({
-            contador: valorEstado
-        })
-        console.log(valorEstado);
-        this.obtenerValorTexto(e);
-    }
+    // actualizarContador(e){
+    //     const valorInput = e.target.value.length;
+    //
+    //
+    //     let valorEstado = this.state.contador;
+    //     valorEstado = 140 - valorInput;
+    //      this.setState({
+    //         contador: valorEstado
+    //     })
+    //     console.log(valorEstado);
+    //     this.obtenerValorTexto(e);
+    // }
 
 
      obtenerValorTexto(e){
@@ -55,7 +56,7 @@ export default class ContenedorTabs extends Component{
      }
 
 
-    agregarComentario (usuario) {
+    agregarComentario () {
         let comentariosGuardados = this.state.usuarios;
         //console.log(comentariosGuardados);
         console.log("This is the user: " +this.state.usuario);
@@ -66,6 +67,7 @@ export default class ContenedorTabs extends Component{
            usuarios: comentariosGuardados
         })
          console.log(this.state.usuarios);
+        //  imprimir(e);
     }
 
 
@@ -76,6 +78,13 @@ export default class ContenedorTabs extends Component{
 
     closeLeftMenu() {
     document.getElementById("leftMenu").style.display = "none";
+    }
+
+    imprimir(e){
+      let tecla = e.keyCode;
+      tecla != 13 ? this.obtenerValorTexto(e):this.agregarComentario();
+
+      console.log(tecla);
     }
 
   render() {
@@ -105,8 +114,8 @@ export default class ContenedorTabs extends Component{
               <a href="#" className="w3-bar-item w3-button">Enlaces</a>
             </div>
 				    <div className="panel-body">
-				        <div className="">
-				            <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
+				        <div className="tab-content">
+				            <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.imprimir}>
 				            </textarea>
 				            <div className="pull-right">
 				            	<Caracteres pintar={this.state.contador}/>
