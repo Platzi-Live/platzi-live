@@ -11,12 +11,16 @@ export default class ElementoEstrella extends Component {
 		this.actualizarEstrella = this.actualizarEstrella.bind(this);
 	}
 
-
 	actualizarEstrella(e) {
 		let contador = 0;
 		this.setState({
-			colorEstrella: this.state.colorEstrella == "color-gris" ? "color-amarillo" :  "color-gris"
-		})
+			colorEstrella: this.state.colorEstrella == "color-gris" ? "color-amarillo" :  "color-gris" 
+			
+		});
+		// this.setState({
+		// 	contador: this.state.contador == 0 ? contador++ : contador--
+		// })
+		console.log(contador);
 	}
 
 	render(){

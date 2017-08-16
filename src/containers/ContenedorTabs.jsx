@@ -60,7 +60,7 @@ export default class ContenedorTabs extends Component{
         //console.log(comentariosGuardados);
         console.log("This is the user: " +this.state.usuario);
         
-        comentariosGuardados.push({foto:'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', nombre:'Zitle', comentario: this.state.usuario});
+        comentariosGuardados.unshift({foto:'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', nombre:'Zitle', comentario: this.state.usuario});
          console.log(comentariosGuardados);
          this.setState ({
            usuarios: comentariosGuardados
