@@ -11,7 +11,7 @@ export default class ChatAlumnos extends Component{
 						<div className="col-xs-2 col-md-2">
 							<img className="imagenesChat" src={FotoUno} alt="imagen1"/>
 						</div>
-						<div className="col-xs-9 col-md-8">
+						<div className="col-xs-8 col-md-8">
 							<p>Rsanchez17</p>
 							<p>Hola @Cvander para ver en ka plataform de 
 							PlatziLive me gustaria tema de Educación financiera, 
