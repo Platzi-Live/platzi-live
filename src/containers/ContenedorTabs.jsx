@@ -2,10 +2,37 @@ import React, {Component} from 'react';
 import ElementosTagChat from "../components/ElementosTagChat";
 import ChatAlumnos from "../components/ChatAlumnos";
 import '../ContenedorTabs.css';
+import Caracteres from '../components/Caracteres.jsx';
 
-export default class ContenedorChat extends Component{
-
-     contar(e) {
+export default class ContenedorTabs extends Component{
+    constructor(props) {
+        super(props);
+        
+        
+     
+    this.state = {
+        contador: 140
+    }
+    
+    this.actualizarContador = this.actualizarContador.bind(this);
+    
+}
+    
+    actualizarContador(e){
+        const valorInput = e.target.value.length; 
+       
+        
+        let valorEstado = this.state.contador; 
+        valorEstado = 140 - valorInput;
+         this.setState({
+            contador: valorEstado
+        })
+        console.log(valorEstado);
+    }
+    
+    
+    
+    /* contar(e) {
        let contadorCaracteres = 0;
        const maximoCaracteres = 140;
        const mensajeTextArea = document.getElementById("txtArea");
@@ -16,7 +43,7 @@ export default class ContenedorChat extends Component{
        const totalCaracteres = maximoCaracteres - contadorCaracteres;
        cantidadCaracteres.innerText = totalCaracteres;
 
-    }
+    }*/
 
     openLeftMenu() {
       document.getElementById("leftMenu").style.display = "block";
@@ -64,10 +91,10 @@ export default class ContenedorChat extends Component{
             </div>
 				    <div className="panel-body">
 				        <div className="tab-content">
-				            <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.contar}>
+				            <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
 				            </textarea>
 				            <div className="pull-right">
-				            	<p id="caracteres">140</p>
+				            	<Caracteres pintar={this.state.contador}/>
 				           </div>
 				        </div>
 						<div className="row">
