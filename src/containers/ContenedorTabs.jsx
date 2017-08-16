@@ -88,17 +88,7 @@ export default class ContenedorTabs extends Component{
     }
 
   render() {
-  	const arregloTags = [
-	  	{
-	  		titulo: 'Notas'
-	  	},
-	  	{
-	  		titulo:'Menciones'
-	  	},
-	  	{
-	  		titulo:'Mis Notas'
-	  	}
-  	]
+  	
     return(
     	<div>
 			<div className="row">
@@ -134,11 +124,7 @@ export default class ContenedorTabs extends Component{
 				        </div>
 						<div className="row">
 							<div className="col-sm-12">
-								<ul className="nav nav-tabs">
-									{arregloTags.map((item,indice) =>
-										<ElementosTagChat textoTagChat={item.titulo}
-										key={indice}/>)};
-								</ul>
+								
 							</div>
 						</div>
 						<div className="row">
