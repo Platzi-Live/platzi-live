@@ -67,11 +67,8 @@ a:hover{
 }
 .scroll{
   overflow-y: scroll;
-<<<<<<< HEAD
-  height:200px;
-=======
   height:415px;
->>>>>>> 91886d62a1e6df5b57185e0df7cb0fade7bb9efc
+
 }
 .fa-star:before{
   font-size: 20px;

@@ -70,7 +70,7 @@ export default class ContenedorTabs extends Component{
         let mensajePregunta = this.state.mensaje;
         let validarMensajePregunta = (mensajePregunta.charAt(mensajePregunta.length-1) == "?") ? comentariosGuardados.pregunta = true : false
         let validarMensajeMencion = (mensajePregunta.charAt(mensajePregunta.length[0]) == "@") ? comentariosGuardados.mencion = true : false
-        colorPregunta:validarMensajePregunta = true ? "text-primary" : 'no'
+      
         console.log(validarMensajePregunta);
         console.log(validarMensajeMencion);
 
@@ -86,9 +86,6 @@ export default class ContenedorTabs extends Component{
         })
          console.log(this.state.usuarios);
 
-    imprimir(e){
-      let tecla = e.target.value;
-      console.log(tecla);
     }
 
 
@@ -122,21 +119,7 @@ export default class ContenedorTabs extends Component{
     // }
 
   render() {
-<<<<<<< HEAD
-    const arregloTags = [
-      {
-        titulo: 'Notas'
-      },
-      {
-        titulo:'Menciones'
-      },
-      {
-        titulo:'Mis Notas'
-      }
-    ]
-=======
 
->>>>>>> 91886d62a1e6df5b57185e0df7cb0fade7bb9efc
     return(
       <div>
       <div className="row">
@@ -161,10 +144,9 @@ export default class ContenedorTabs extends Component{
               <a href="#" className="w3-bar-item w3-button">Archivos</a>
               <a href="#" className="w3-bar-item w3-button">Enlaces</a>
             </div>
-<<<<<<< HEAD
             <div className="panel-body">
                 <div className="tab-content">
-                    <textarea id="txtArea" onKeyUp  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
+                    <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.imprimir}>
                     </textarea>
                     <div className="pull-right">
                       <Caracteres pintar={this.state.contador}/>
@@ -173,11 +155,7 @@ export default class ContenedorTabs extends Component{
                 </div>
             <div className="row">
               <div className="col-sm-12">
-                <ul className="nav nav-tabs">
-                  {arregloTags.map((item,indice) =>
-                    <ElementosTagChat textoTagChat={item.titulo}
-                    key={indice}/>)};
-                </ul>
+
               </div>
             </div>
             <div className="row">
@@ -188,29 +166,5 @@ export default class ContenedorTabs extends Component{
       </div>
       </div>
       );
-=======
-				    <div className="panel-body">
-				        <div className="tab-content">
-				            <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.imprimir}>
-				            </textarea>
-				            <div className="pull-right">
-				            	<Caracteres pintar={this.state.contador}/>
-				           </div>
-				           <a href="#" className="w3-bar-item w3-button" onClick={this.agregarComentario}>Enlace2</a>
-				        </div>
-						<div className="row">
-							<div className="col-sm-12">
-
-							</div>
-						</div>
-						<div className="row">
-							<ChatAlumnos comentarios = {this.state.usuarios}/>
-						</div>
-				    </div>
-				</div>
-			</div>
-    	</div>
-    	);
->>>>>>> 91886d62a1e6df5b57185e0df7cb0fade7bb9efc
   }
 }

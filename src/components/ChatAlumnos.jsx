@@ -12,10 +12,10 @@ export default class ChatAlumnos extends Component{
 	}
 	render(){
 		return(
-			<div className="col-sm-12 scroll">
+			<div className="col-sm-12 scroll" styles={this.state.colorPregunta}>
 			{this.props.comentarios.map((elemento,indice)=>{
 				return(
-						<div className="row">
+						<div className="row" styles={this.state.colorPregunta}>
 						<div className="col-xs-2 col-md-2">
 							<img className="imagenesChat" src={FotoUno} alt="imagen1"/>
 						</div>
