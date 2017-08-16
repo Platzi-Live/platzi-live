@@ -60,3 +60,13 @@
   position: absolute !important;
   height: auto;
 }
+.checkbox{
+    color: orange;
+    list-style: none;
+    display: inline-block;
+    
+}
+.listaCheckbox{
+    margin: 0px;
+    padding: 0px;
+}
