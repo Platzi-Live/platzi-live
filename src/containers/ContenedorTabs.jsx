@@ -75,7 +75,7 @@ export default class ContenedorTabs extends Component{
         console.log(validarMensajeMencion);
 
         comentariosGuardados.unshift(
-          {foto:'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png',
+          {foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png',
            nombre:'Zitle',
           comentario: this.state.mensaje,
           pregunta: this.state.pregunta,
