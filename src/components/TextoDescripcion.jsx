@@ -5,7 +5,7 @@ export default class TextoDescripcion extends Component{
   render() {
     return(
         <div className="">
-          <div className="panel with-nav-tabs panel-default">
+          <div className="panel with-nav-tabs panel-default hidden-xs hidden-sm">
             <div className="panel-heading">
               <ul className="nav nav-tabs">
                 <li className="active"><a href="#tab1default" data-toggle="tab"><strong>Descripcion</strong></a></li>

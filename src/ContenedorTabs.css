@@ -26,7 +26,7 @@
     border-color: #3071a9;
 }
 .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
-    color: #fff;   
+    color: #fff;
 }
 .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
 .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
@@ -50,4 +50,13 @@
 	bottom: 23px;
 	right: 5px;
 	color: #808B7A;
+}
+
+#leftMenu{
+  display:none;
+}
+
+.w3-sidebar {
+  position: absolute !important;
+  height: auto;
 }

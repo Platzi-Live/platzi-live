@@ -15,7 +15,7 @@ import estudiante11 from '../img/imagen2.png';
 export default class EstudiantesDestacados extends Component{
   render() {
     return(
-        <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 estudiantesDestacados">
+        <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 estudiantesDestacados hidden-xs hidden-sm">
             <span className="col-xs-1 col-sm-1 col-md-1 col-lg-1 textoEstudiantes">Estudiantes<br/>Destacados</span>
             <ul className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
                 <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
@@ -57,7 +57,7 @@ export default class EstudiantesDestacados extends Component{
                     <div className="estudiante">
                         <img className="img-responsive estudiante" src={estudiante11} alt=""/>
                     </div>
-                </li> 
+                </li>
             </ul>
             <div className="btn-group show-on-hover pull-right boton col-xs-1 col-sm-1 col-md-1 col-lg-1" >
                 <span type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -69,8 +69,8 @@ export default class EstudiantesDestacados extends Component{
                     <li><a href="#"><span className="glyphicon glyphicon-edit"></span> Mi suscripción</a></li>
                     <li><a href="#"><span className="glyphicon glyphicon-new-window"></span> Salir</a></li>
                 </ul>
-            </div>   
-        </div> 
+            </div>
+        </div>
     );
   }
 }
