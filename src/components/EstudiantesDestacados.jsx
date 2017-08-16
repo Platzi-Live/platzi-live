@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../EstudiantesDestacados.css';
+import Estudiante from '../components/Estudiante';
+
 import estudiante1 from '../img/alumnoDestacado1.jpg';
 import estudiante2 from '../img/alumnoDestacado2.jpeg';
 import estudiante3 from '../img/alumnoDestacado3.jpg';
@@ -12,57 +14,61 @@ import estudiante9 from '../img/imagen3.jpg';
 import estudiante10 from '../img/imagen5.jpg';
 import estudiante11 from '../img/imagen2.png';
 
+const avatar = [
+    {
+        imgUrl: estudiante1
+    },
+    {
+        imgUrl: estudiante2
+    },
+    {
+        imgUrl: estudiante3
+    },
+    {
+        imgUrl: estudiante4
+    },
+    {
+        imgUrl: estudiante5
+    },
+    {
+        imgUrl: estudiante6
+    },
+    {
+        imgUrl: estudiante7
+    },
+    {
+        imgUrl: estudiante8
+    },
+    {
+        imgUrl: estudiante9
+    },
+    {
+        imgUrl: estudiante10
+    },  
+]
+
 export default class EstudiantesDestacados extends Component{
-  render() {
+    constructor(props){
+        super(props);
+    }
+    render() {
     return(
         <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4 estudiantesDestacados hidden-xs hidden-sm">
             <span className="col-xs-1 col-sm-1 col-md-1 col-lg-1 textoEstudiantes">Estudiantes<br/>Destacados</span>
             <ul className="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante1} alt=""/>
-                    </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante2} alt=""/>
-                        </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante3} alt=""/>
-                    </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante4} alt=""/>
-                    </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante5} alt=""/>
-                    </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante6} alt=""/>
-                    </div>
-                </li>
-                <li className="estudiante col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante7} alt=""/>
-                    </div>
-                </li>
-                <li className="right estudiante-usuario col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-                    <div className="estudiante">
-                        <img className="img-responsive estudiante" src={estudiante11} alt=""/>
-                    </div>
-                </li>
+                {avatar.map((img, i) =>{
+                    return <Estudiante key={i} img={img.imgUrl} />
+                    
+                })}
             </ul>
             <div className="btn-group show-on-hover pull-right boton col-xs-1 col-sm-1 col-md-1 col-lg-1" >
-                <span type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span className="caret"></span>
-                </span>
+                <div className="estudiante">
+                    <span type="" className=" btn-default dropdown-toggle" data-toggle="dropdown">
+                        <img className="img-responsive estudiante" src={estudiante11} alt=""/>
+                        <span className="caret"></span>
+                    </span>
+                </div> 
+                
                 <ul className="dropdown-menu" role="menu">
                     <li><a href="#"><span className="glyphicon glyphicon-user"></span> Mi perfil(Freddy Vega)</a></li>
                     <li><a href="#"><span className="glyphicon glyphicon-comment"></span> Mensajes Directos</a></li>
