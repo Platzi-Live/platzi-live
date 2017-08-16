@@ -119,7 +119,7 @@ export default class ContenedorTabs extends Component{
     // }
 
   render() {
-  	
+
     return(
     	<div>
 			<div className="row">
@@ -155,7 +155,7 @@ export default class ContenedorTabs extends Component{
 				        </div>
 						<div className="row">
 							<div className="col-sm-12">
-								
+
 							</div>
 						</div>
 						<div className="row">
