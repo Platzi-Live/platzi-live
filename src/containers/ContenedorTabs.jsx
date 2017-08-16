@@ -7,26 +7,6 @@ import Caracteres from '../components/Caracteres.jsx';
 export default class ContenedorTabs extends Component{
     constructor(props) {
         super(props);
-<<<<<<< HEAD
-        this.state = {
-            contador: 140, 
-             usuarios: [
-                {
-                    foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', 
-                    nombre: '@zitle', 
-                    comentario: 'Hola, probando'
-               }, 
-                {
-                    foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', 
-                    nombre: '@adri', 
-                    comentario: 'Ya me quiero dormir :('
-               }
-            ]
-        }
-        this.actualizarContador = this.actualizarContador.bind(this);
-        this.agregarComentario = this.agregarComentario.bind(this);   
-    }
-=======
 
 
     this.state = {
@@ -51,7 +31,6 @@ export default class ContenedorTabs extends Component{
 
 }
 
->>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
     actualizarContador(e){
         const valorInput = e.target.value.length;
 
@@ -65,12 +44,8 @@ export default class ContenedorTabs extends Component{
         this.obtenerValorTexto(e);
     }
 
-<<<<<<< HEAD
-    obtenerValorTexto(e){
-=======
 
      obtenerValorTexto(e){
->>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
       let valorTexto = e.target.value;
          console.log("This is the val " +valorTexto);
         this.setState({
@@ -78,15 +53,9 @@ export default class ContenedorTabs extends Component{
         })
         console.log(this.state) //Aquí se actualiza el estado.
      }
-<<<<<<< HEAD
-    
-    
-    agregarComentario(usuario) {
-=======
 
 
     agregarComentario (usuario) {
->>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
         let comentariosGuardados = this.state.usuarios;
         //console.log(comentariosGuardados);
         console.log("This is the user: " +this.state.usuario);
@@ -98,17 +67,8 @@ export default class ContenedorTabs extends Component{
         })
          console.log(this.state.usuarios);
     }
-<<<<<<< HEAD
-    
-    imprimir(e){
-      console.log(e);
-
-    }
-    
-=======
 
 
->>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
 
     openLeftMenu() {
       document.getElementById("leftMenu").style.display = "block";
@@ -119,34 +79,34 @@ export default class ContenedorTabs extends Component{
     }
 
   render() {
-  	const arregloTags = [
-	  	{
-	  		titulo: 'Notas'
-	  	},
-	  	{
-	  		titulo:'Menciones'
-	  	},
-	  	{
-	  		titulo:'Mis Notas'
-	  	}
-  	]
+    const arregloTags = [
+      {
+        titulo: 'Notas'
+      },
+      {
+        titulo:'Menciones'
+      },
+      {
+        titulo:'Mis Notas'
+      }
+    ]
     return(
-    	<div>
-			<div className="row">
-				<div className="panel with-nav-tabs panel-primary">
-				    <div className="panel-heading">
-				            <ul className="nav nav-tabs">
+      <div>
+      <div className="row">
+        <div className="panel with-nav-tabs panel-primary">
+            <div className="panel-heading">
+                    <ul className="nav nav-tabs">
                         <li className="active  hidden-lg hidden-xl">
                           <a href="#tab1primary" data-toggle="tab" onClick={this.openLeftMenu}>
                             <i className="fa fa-bars " aria-hidden="true"></i>
                           </a>
                         </li>
-				                <li className="active"><a href="#tab1primary" data-toggle="tab">Notas</a></li>
-				                <li className="hidden-xs hidden-sm"><a href="#tab2primary" data-toggle="tab">Mejores</a></li>
-				                <li className="hidden-xs hidden-sm"><a href="#tab3primary" data-toggle="tab">Preguntas</a></li>
-				                <li className="hidden-xs hidden-sm"><a href="#tab3primary" data-toggle="tab">Enlaces</a></li>
-				            </ul>
-				    </div>
+                        <li className="active"><a href="#tab1primary" data-toggle="tab">Notas</a></li>
+                        <li className="hidden-xs hidden-sm"><a href="#tab2primary" data-toggle="tab">Mejores</a></li>
+                        <li className="hidden-xs hidden-sm"><a href="#tab3primary" data-toggle="tab">Preguntas</a></li>
+                        <li className="hidden-xs hidden-sm"><a href="#tab3primary" data-toggle="tab">Enlaces</a></li>
+                    </ul>
+            </div>
             <div className="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" id="leftMenu">
               <button onClick={this.closeLeftMenu} className="w3-bar-item w3-button w3-large">Close &times;</button>
               <a href="#" className="w3-bar-item w3-button">Notas</a>
@@ -154,35 +114,31 @@ export default class ContenedorTabs extends Component{
               <a href="#" className="w3-bar-item w3-button">Archivos</a>
               <a href="#" className="w3-bar-item w3-button">Enlaces</a>
             </div>
-				    <div className="panel-body">
-				        <div className="tab-content">
-				            <textarea   placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
-				            </textarea>
-				            <div className="pull-right">
-				            	<Caracteres pintar={this.state.contador}/>
-				           </div>
-				           <a href="#" className="w3-bar-item w3-button" onClick={this.agregarComentario}>Enlace2</a>
-				        </div>
-						<div className="row">
-							<div className="col-sm-12">
-								<ul className="nav nav-tabs">
-									{arregloTags.map((item,indice) =>
-										<ElementosTagChat textoTagChat={item.titulo}
-										key={indice}/>)};
-								</ul>
-							</div>
-						</div>
-						<div className="row">
-<<<<<<< HEAD
-              {/*mandamos el arrelo por props*/}
-=======
->>>>>>> 2fc0ee8b73cff145035f59be613cd7f60ca66d69
-							<ChatAlumnos comentarios = {this.state.usuarios}/>
-						</div>
-				    </div>
-				</div>
-			</div>
-    	</div>
-    	);
+            <div className="panel-body">
+                <div className="tab-content">
+                    <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
+                    </textarea>
+                    <div className="pull-right">
+                      <Caracteres pintar={this.state.contador}/>
+                   </div>
+                   <a href="#" className="w3-bar-item w3-button" onClick={this.agregarComentario}>Enlace2</a>
+                </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <ul className="nav nav-tabs">
+                  {arregloTags.map((item,indice) =>
+                    <ElementosTagChat textoTagChat={item.titulo}
+                    key={indice}/>)};
+                </ul>
+              </div>
+            </div>
+            <div className="row">
+              <ChatAlumnos comentarios = {this.state.usuarios}/>
+            </div>
+            </div>
+        </div>
+      </div>
+      </div>
+      );
   }
 }
