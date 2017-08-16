@@ -13,14 +13,16 @@ export default class ElementoEstrella extends Component {
 
 	actualizarEstrella(e) {
 		let contador = 0;
+		let tmp;
 		this.setState({
 			colorEstrella: this.state.colorEstrella == "color-gris" ? "color-amarillo" :  "color-gris" 
-			
 		});
-		// this.setState({
-		// 	contador: this.state.contador == 0 ? contador++ : contador--
-		// })
-		console.log(contador);
+		this.setState({
+			contador: this.state.contador ? contador++ : contador--			
+		});
+			console.log(contador);	
+		
+		
 	}
 
 	render(){

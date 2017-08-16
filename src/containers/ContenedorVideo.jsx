@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar.jsx';
 import ContenedorDescripcion from './ContenedorDescripcion.jsx';
 import '../ContenedorVideo.css';
 
-
 export default class ContenedorVideo extends Component{
   render() {
     return(
