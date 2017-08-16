@@ -56,8 +56,8 @@ export default class ContenedorTabs extends Component{
             pregunta: booleanos,
             mencion: booleanos
         })
-        console.log(this.state) //Aquí se actualiza el estado.
 
+        console.log(this.state) //Aquí se actualiza el estado.
      }
 
 
@@ -66,6 +66,7 @@ export default class ContenedorTabs extends Component{
     agregarComentario (e) {
         let comentariosGuardados = this.state.usuarios;
         //console.log(comentariosGuardados);
+
         // console.log("This is the message: " + this.state.mensaje);
         let mensajePregunta = this.state.mensaje;
         let validarMensajePregunta = (mensajePregunta.charAt(mensajePregunta.length-1) == "?") ? comentariosGuardados.pregunta = true : false
@@ -85,8 +86,28 @@ export default class ContenedorTabs extends Component{
            usuarios: comentariosGuardados
         })
          console.log(this.state.usuarios);
-
+         localStorage.setItem('usuarios', JSON.stringify(comentariosGuardados));
+         
     }
+    
+    
+     componentDidMount() {
+        let obteniendoUsuarios = localStorage.getItem("usuarios");
+        const convertirUsuariosAObjeto = JSON.parse(obteniendoUsuarios);
+        this.setState({
+            usuarios: convertirUsuariosAObjeto || [] //cuando no tenga nada en mi localstorage, que mande un arreglo vacio por defecto.  
+        });
+    }
+    
+    
+    imprimir(e){
+      let tecla = e.keyCode;
+      tecla != 13 ? this.obtenerValorTexto(e):this.agregarComentario();
+        
+      console.log(tecla);
+      this.actualizarContador(e);   
+    }
+    
 
 
     openLeftMenu() {
@@ -97,13 +118,6 @@ export default class ContenedorTabs extends Component{
     document.getElementById("leftMenu").style.display = "none";
     }
 
-    imprimir(e){
-      let tecla = e.keyCode;
-      tecla != 13 ? this.obtenerValorTexto(e) : this.agregarComentario()
-      this.actualizarContador(e);
-      console.log(tecla);
-      // this.filtrarPreguntas(e);
-    }
 
     // filtrarPreguntas(e){
     //   let texto = this.state.usuarios[i].comentario;
@@ -117,6 +131,7 @@ export default class ContenedorTabs extends Component{
     //  alert(textoSeparado);
     //
     // }
+
 
   render() {
 
@@ -151,7 +166,6 @@ export default class ContenedorTabs extends Component{
 				            <div className="pull-right">
 				            	<Caracteres pintar={this.state.contador}/>
 				           </div>
-				           <a href="#" className="w3-bar-item w3-button" onClick={this.agregarComentario}>Enlace2</a>
 				        </div>
 						<div className="row">
 							<div className="col-sm-12">
