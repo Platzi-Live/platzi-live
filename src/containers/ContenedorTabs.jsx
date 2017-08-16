@@ -9,13 +9,26 @@ export default class ContenedorTabs extends Component{
         super(props);
         
         
-     
     this.state = {
-        contador: 140
+        contador: 140, 
+         usuarios: [
+            {
+                foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', 
+                nombre: '@zitle', 
+                comentario: 'Hola, probando'
+           }, 
+            {
+                foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', 
+                nombre: '@adri', 
+                comentario: 'Ya me quiero dormir :('
+           }
+        ]
     }
     
     this.actualizarContador = this.actualizarContador.bind(this);
-    
+    this.agregarComentario = this.agregarComentario.bind(this);
+
+      
 }
     
     actualizarContador(e){
@@ -28,22 +41,34 @@ export default class ContenedorTabs extends Component{
             contador: valorEstado
         })
         console.log(valorEstado);
+        this.obtenerValorTexto(e);
     }
     
     
+     obtenerValorTexto(e){
+      let valorTexto = e.target.value;
+         console.log("This is the val " +valorTexto);
+        this.setState({
+            usuario:valorTexto
+        })
+        console.log(this.state) //Aquí se actualiza el estado.
+     }
     
-    /* contar(e) {
-       let contadorCaracteres = 0;
-       const maximoCaracteres = 140;
-       const mensajeTextArea = document.getElementById("txtArea");
-       const cantidadCaracteres = document.getElementById("caracteres");
-
-
-       contadorCaracteres = mensajeTextArea.value.length;
-       const totalCaracteres = maximoCaracteres - contadorCaracteres;
-       cantidadCaracteres.innerText = totalCaracteres;
-
-    }*/
+    
+    agregarComentario (usuario) {
+        let comentariosGuardados = this.state.usuarios;
+        //console.log(comentariosGuardados);
+        console.log("This is the user: " +this.state.usuario);
+        
+        comentariosGuardados.push({foto:'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', nombre:'Zitle', comentario: this.state.usuario});
+         console.log(comentariosGuardados);
+         this.setState ({
+           usuarios: comentariosGuardados
+        })
+         console.log(this.state.usuarios);
+    }
+    
+    
 
     openLeftMenu() {
       document.getElementById("leftMenu").style.display = "block";
@@ -96,6 +121,7 @@ export default class ContenedorTabs extends Component{
 				            <div className="pull-right">
 				            	<Caracteres pintar={this.state.contador}/>
 				           </div>
+				           <a href="#" className="w3-bar-item w3-button" onClick={this.agregarComentario}>Enlace2</a>
 				        </div>
 						<div className="row">
 							<div className="col-sm-12">
