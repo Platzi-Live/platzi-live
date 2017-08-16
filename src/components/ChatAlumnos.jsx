@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import FotoUno from "../img/imagen2.png";
 import ElementoEstrella from "./ElementoEstrella";
+import '../ChatAlumnos.css';
 import '../App.css';
 
 export default class ChatAlumnos extends Component{
@@ -17,10 +18,10 @@ export default class ChatAlumnos extends Component{
 						return(
 							<div className="row">
 								<div className="col-xs-2 col-md-2">
-									<img className="imagenesChat" src={FotoUno} alt="imagen1"/>
+									<a href="https://platzi.com/@yakujjina/" target="_blank"><img className="imagenesChat" src={FotoUno} alt="Usuario"/></a>
 								</div>
 								<div className="col-xs-8 col-md-8">
-									<p>@PlatziAdmin</p>
+									   <a data-username="@PlatziAdmin" id="usuario"><p className="text-primary user-hover">@PlatziAdmin</p></a>
 									<p>{item.comentario}</p>
 								</div>
 								<div id="iconoEstrella" className="col-xs-2 col-md-2 fila-icono" >
