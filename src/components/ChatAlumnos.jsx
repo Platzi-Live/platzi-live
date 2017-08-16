@@ -12,7 +12,6 @@ export default class ChatAlumnos extends Component{
 	}
 	render(){
 		return(
-<<<<<<< HEAD
 			<div className="col-sm-12 scroll">
 			{this.props.comentarios.map((elemento,indice)=>{
 				return(
