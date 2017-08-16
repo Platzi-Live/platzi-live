@@ -67,7 +67,7 @@ a:hover{
 }
 .scroll{
   overflow-y: scroll;
-  height:70px;
+  height:200px;
 }
 .fa-star:before{
   font-size: 20px;

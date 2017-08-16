@@ -7,30 +7,24 @@ import Caracteres from '../components/Caracteres.jsx';
 export default class ContenedorTabs extends Component{
     constructor(props) {
         super(props);
-        
-        
-    this.state = {
-        contador: 140, 
-         usuarios: [
-            {
-                foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', 
-                nombre: '@zitle', 
-                comentario: 'Hola, probando'
-           }, 
-            {
-                foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', 
-                nombre: '@adri', 
-                comentario: 'Ya me quiero dormir :('
-           }
-        ]
+        this.state = {
+            contador: 140, 
+             usuarios: [
+                {
+                    foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', 
+                    nombre: '@zitle', 
+                    comentario: 'Hola, probando'
+               }, 
+                {
+                    foto: 'https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-200x200.7714256da16f.png', 
+                    nombre: '@adri', 
+                    comentario: 'Ya me quiero dormir :('
+               }
+            ]
+        }
+        this.actualizarContador = this.actualizarContador.bind(this);
+        this.agregarComentario = this.agregarComentario.bind(this);   
     }
-    
-    this.actualizarContador = this.actualizarContador.bind(this);
-    this.agregarComentario = this.agregarComentario.bind(this);
-
-      
-}
-    
     actualizarContador(e){
         const valorInput = e.target.value.length; 
        
@@ -43,9 +37,8 @@ export default class ContenedorTabs extends Component{
         console.log(valorEstado);
         this.obtenerValorTexto(e);
     }
-    
-    
-     obtenerValorTexto(e){
+
+    obtenerValorTexto(e){
       let valorTexto = e.target.value;
          console.log("This is the val " +valorTexto);
         this.setState({
@@ -55,7 +48,7 @@ export default class ContenedorTabs extends Component{
      }
     
     
-    agregarComentario (usuario) {
+    agregarComentario(usuario) {
         let comentariosGuardados = this.state.usuarios;
         //console.log(comentariosGuardados);
         console.log("This is the user: " +this.state.usuario);
@@ -68,6 +61,10 @@ export default class ContenedorTabs extends Component{
          console.log(this.state.usuarios);
     }
     
+    imprimir(e){
+      console.log(e);
+
+    }
     
 
     openLeftMenu() {
@@ -116,7 +113,7 @@ export default class ContenedorTabs extends Component{
             </div>
 				    <div className="panel-body">
 				        <div className="tab-content">
-				            <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
+				            <textarea   placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
 				            </textarea>
 				            <div className="pull-right">
 				            	<Caracteres pintar={this.state.contador}/>
@@ -133,7 +130,8 @@ export default class ContenedorTabs extends Component{
 							</div>
 						</div>
 						<div className="row">
-							<ChatAlumnos />
+              {/*mandamos el arrelo por props*/}
+							<ChatAlumnos comentarios = {this.state.usuarios}/>
 						</div>
 				    </div>
 				</div>
