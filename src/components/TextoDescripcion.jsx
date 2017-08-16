@@ -15,12 +15,12 @@ export default class TextoDescripcion extends Component{
               <div className="tab-content">
                 <div className="tab-pane fade in active" id="tab1default">
                   <div className=" row">
-                    <h1 className="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <h1 className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                       <strong>Temario de la clase</strong>
                     </h1>
-                    <span className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <span className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                       <div className="row">
-                        <h5 className="padding-platzinueva"><a>Video en nueva ventana</a></h5>
+                        <h6 className="padding-platzinueva"><a>Video en nueva ventana</a></h6>
                         <h3 className="padding-platzihashtag"><em>#platzi</em></h3>
                       </div>
                     </span>
