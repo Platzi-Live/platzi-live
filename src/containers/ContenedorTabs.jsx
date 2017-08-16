@@ -165,12 +165,24 @@ export default class ContenedorTabs extends Component{
 				            </textarea>
 				            <div className="pull-right">
 				            	<Caracteres pintar={this.state.contador}/>
-				           </div>
+
+                            </div>
 				        </div>
 						<div className="row">
-							<div className="col-sm-12">
-
-							</div>
+                                <ul>
+                                    <li className="checkbox col-xs-3 col-sm-3 col-md-3 col-lg-3 listaCheckbox">
+                                        <input type="checkbox" id="test8" disabled="" />
+                                        <label className="listaCheckbox" for="test8">Enviar</label>
+                                    </li>
+                                    <li className="checkbox col-xs-3 col-sm-3 col-md-3 col-lg-3 listaCheckbox">
+                                        <input type="checkbox" id="test8" disabled="" />
+                                        <label className="listaCheckbox" for="test8">Badge</label>
+                                    </li>
+                                    <li className="checkbox col-xs-3 col-sm-3 col-md-3 col-lg-3 listaCheckbox">
+                                        <input type="checkbox" id="test8" disabled="" />
+                                        <label className="listaCheckbox" for="test8">Encuesta</label>
+                                    </li>
+                            </ul>
 						</div>
 						<div className="row">
 							<ChatAlumnos comentarios = {this.state.usuarios}/>
