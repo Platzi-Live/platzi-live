@@ -68,6 +68,10 @@ export default class ContenedorTabs extends Component{
          console.log(this.state.usuarios);
     }
 
+    imprimir(e){
+      let tecla = e.target.value;
+      console.log(tecla);
+    }
 
 
     openLeftMenu() {
@@ -116,7 +120,7 @@ export default class ContenedorTabs extends Component{
             </div>
             <div className="panel-body">
                 <div className="tab-content">
-                    <textarea id="txtArea"  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
+                    <textarea id="txtArea" onKeyUp  placeholder="Escribe una nota" maxLength="140" onKeyUp={this.actualizarContador}>
                     </textarea>
                     <div className="pull-right">
                       <Caracteres pintar={this.state.contador}/>
