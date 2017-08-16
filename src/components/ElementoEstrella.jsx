@@ -10,14 +10,15 @@ export default class ElementoEstrella extends Component {
 		};
 		this.actualizarEstrella = this.actualizarEstrella.bind(this);
 	}
+
+
 	actualizarEstrella(e) {
 		let contador = 0;
-		console.log(e.target);
 		this.setState({
-			colorEstrella:"color-amarillo"
-		});
-		// this.state ? this.state.removeClass('color-amarillo') : this.state.addClass('color-amarillo');
+			colorEstrella: this.state.colorEstrella == "color-gris" ? "color-amarillo" :  "color-gris"
+		})
 	}
+
 	render(){
 		return(
 				<i className={`fa fa-star ${this.state.colorEstrella}`}  aria-hidden="true" onClick={this.actualizarEstrella}></i>
